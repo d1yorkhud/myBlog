@@ -45,7 +45,12 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{% url 'password_change'%}">Change Password</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                                <form action="{% url 'logout' %}" method="post">
+                                 {% csrf_token %}
+                              <button type="submit" class="dropdown-item">
+                           Logout
+                             </button>
+                         </form>
                             </div>
                         </li>
                     </ul>
