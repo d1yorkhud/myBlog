@@ -132,3 +132,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 #EMAIL BACKEND
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+# MEDIA
+MEDIA_URL = '/media/'
+MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
