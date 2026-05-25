@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
-{% block title %}Main page{% endblock title %}
+{% load static %}
+
+{% block title %}Main Page{% endblock title %}
+
 {% block content %}
-   {% if user.is_authenticated %}
-       {{user.username}}!
-       <p>
-        <form action="{% url 'logout' %}" method="post">
-    {% csrf_token %}
-    <button type="submit">Logout</button>
-</form>
-    </p>
-    {% else %}
-         <p>You haven't login</p>
-         <a href="{% url 'login' %}">Login</a> |
-         <a href="{% url 'signup' %}">Signup</a>
-    {% endif %}
+    <br/>
+    <div class="jumbotron">
+        <h1 class="display-4">Hi!</h1>
+        <p class="lead">Welcome to my blog!</p>
+        <hr class="my-4">
+        <p>You can find whatever shit I write here.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">Read my posts</a>
+        </p>
+    </div>
 {% endblock content %}
