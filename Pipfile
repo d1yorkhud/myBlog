@@ -10,6 +10,11 @@ django-crispy-forms = "*"
 crispy-bootstrap4 = "*"
 pillow = "*"
 django-ckeditor = "*"
+environs = {extras = ["django"], version = "==8.0.0"}
+marshmallow = "<4"
+psycopg2-binary = "*"
+whitenoise = "*"
+gunicorn = "*"
 
 [dev-packages]
 
