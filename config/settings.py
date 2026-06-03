@@ -32,6 +32,9 @@ SECRET_KEY = env.str("SECRET_KEY")
 DEBUG = env.bool("DEBUG", default=False)
 
 ALLOWED_HOSTS = [".railway.app", "127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = [
+    "https://web-production-83492.up.railway.app/",
+]
 
 
 # Application definition
